@@ -4,6 +4,9 @@ A fully functional chess game with beautiful modern UI and complete chess rule i
 
 ## 🎮 Features
 
+
+
+
 ### Complete Chess Rules
 - ✅ All piece movements (King, Queen, Rook, Bishop, Knight, Pawn)
 - ✅ Special moves:
