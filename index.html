@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess 2.0 - Premium Chess Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">♟ Chess 2.0</h1>
+            <p class="subtitle">Premium Chess Experience</p>
+        </header>
+
+        <div class="game-layout">
+            <!-- Left Panel: Captured Pieces -->
+            <div class="side-panel left-panel">
+                <h3 class="panel-title">Captured by White</h3>
+                <div id="white-captured" class="captured-pieces"></div>
+            </div>
+
+            <!-- Main Game Area -->
+            <div class="main-game">
+                <!-- Game Status -->
+                <div class="game-status">
+                    <div class="turn-indicator">
+                        <div id="turn-display" class="turn-text">White's Turn</div>
+                        <div class="turn-icon">♔</div>
+                    </div>
+                    <div id="game-message" class="game-message"></div>
+                </div>
+
+                <!-- Chess Board -->
+                <div class="board-container">
+                    <div id="chess-board" class="chess-board"></div>
+                </div>
+
+                <!-- Game Controls -->
+                <div class="controls">
+                    <button id="new-game-btn" class="btn btn-primary">
+                        <span class="btn-icon">🔄</span>
+                        New Game
+                    </button>
+                    <button id="undo-btn" class="btn btn-secondary">
+                        <span class="btn-icon">↶</span>
+                        Undo Move
+                    </button>
+                    <button id="hint-btn" class="btn btn-secondary">
+                        <span class="btn-icon">💡</span>
+                        Show Hints
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Panel: Captured Pieces -->
+            <div class="side-panel right-panel">
+                <h3 class="panel-title">Captured by Black</h3>
+                <div id="black-captured" class="captured-pieces"></div>
+            </div>
+        </div>
+
+        <!-- Move History -->
+        <div class="move-history-container">
+            <h3 class="history-title">Move History</h3>
+            <div id="move-history" class="move-history"></div>
+        </div>
+    </div>
+
+    <!-- Pawn Promotion Modal -->
+    <div id="promotion-modal" class="modal">
+        <div class="modal-content">
+            <h2 class="modal-title">Choose Promotion</h2>
+            <div class="promotion-choices">
+                <button class="promotion-btn" data-piece="queen">♕</button>
+                <button class="promotion-btn" data-piece="rook">♖</button>
+                <button class="promotion-btn" data-piece="bishop">♗</button>
+                <button class="promotion-btn" data-piece="knight">♘</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="chess.js"></script>
+    <script src="ui.js"></script>
+</body>
+</html>
